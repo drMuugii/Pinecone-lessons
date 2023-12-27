@@ -1,0 +1,17 @@
+body{
+    padding: 10px;
+    color: blue;
+    text-align: center;
+    font-size: larger;
+}
+.image{
+    height: auto;
+    width: 100%;
+}
+.box1{
+    height: 100px;
+    width: 300px;
+    border: 1px;
+    border-radius: 2px;
+    color: beige;
+}
