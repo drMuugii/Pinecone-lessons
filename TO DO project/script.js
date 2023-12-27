@@ -25,5 +25,5 @@ function resetFrom() {
   document.getElementById("taskDescription").value = "";
 }
 
-const font = (document.getElementsByTagName("p")[1].style.fontFamily =
+var font = (document.getElementsByTagName("p")[0].style.fontFamily =
   "Montserrat, Arial, sans-serif");
