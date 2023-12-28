@@ -10,42 +10,44 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
   </head>
   <body>
     <div class="board">
       <div class="list">
-        <p>Todo 1</p>
-        <div id="todoTasks">
-          <div class="task">Todo</div>
-          <div class="task">Todo card</div>
-        </div>
-        <button onclick="showModal()">Add card</button>
+        <h1 style="font-family: Montserrat, Arial, sans-serif">To do</h1>
+        <div id="todoTasks"></div>
+        <button onclick="showModal('todoTasks')">Add card</button>
       </div>
 
       <div class="list">
-        <p>In progress 1</p>
-        <div class="task">Todo 1</div>
-        <div class="task">Todo 2</div>
-        <button class="addButton">Add task</button>
+        <h1 style="font-family: Montserrat, Arial, sans-serif">In progress</h1>
+        <div id="progressTasks"></div>
+        <i class="fa-solid fa-circle-check"></i>
+        <button onclick="showModal('progressTasks')">Add card</button>
       </div>
 
       <div class="list">
-        <p>Stuck 0</p>
-        <div class="task">Todo 1</div>
-        <div class="task">Todo 2</div>
-        <button class="addButton">Add task</button>
+        <h1 style="font-family: Montserrat, Arial, sans-serif">Stuck</h1>
+        <div id="stuckTasks"></div>
+        <button onclick="showModal('stuckTasks')">Add card</button>
       </div>
 
       <div class="list">
-        <p>Done 0</p>
-        <div class="task">Todo 1</div>
-        <div class="task">Todo 2</div>
-        <button class="addButton">Add task</button>
+        <h1 style="font-family: Montserrat, Arial, sans-serif">Done</h1>
+        <div id="doneTasks"></div>
+        <button onclick="showModal('doneTasks')">Add card</button>
       </div>
     </div>
 
-    <div class="modal" id="modaId">
+    <div class="modal" id="createModal">
       <div class="modal-bg" onclick="hideModal()"></div>
       <div class="modal-content">
         <div>
@@ -53,10 +55,30 @@
           <br />
           <input type="text" id="taskTitle" />
         </div>
+
         <div>
           <label for="taskDescription">Description</label>
           <br />
           <textarea id="taskDescription"></textarea>
+          <div>
+            <label for="taskPriority">Priority: </label>
+            <select id="taskPriority">
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+              <option>Urgent</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="taskStatus">Status: </label>
+            <select id="taskStatus">
+              <option value="todoTasks">Todo</option>
+              <option value="progressTasks">In progress</option>
+              <option value="stuckTasks">Stuck</option>
+              <option value="doneTasks">Done</option>
+            </select>
+          </div>
         </div>
         <div>
           <button onclick="addTask()">Add task</button>

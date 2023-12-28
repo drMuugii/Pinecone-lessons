@@ -13,17 +13,18 @@ html {
 
 .list {
   flex: 1;
-  background-color: #f4f4f4;
+  background-color: #dedddd;
   border-radius: 10px;
   padding: 10px;
 }
 
 .task {
-  background-color: #ffffff;
-  padding: 10px;
+  background-color: #fcfcfc;
+  padding: 10px 10px 10px;
   border-radius: 10px;
   font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 250;
+  margin-bottom: 15px;
 }
 
 .modal {
@@ -44,4 +45,10 @@ html {
   background-color: #f4f4f4;
   padding: 15px;
   border-radius: 15px;
+}
+
+.taskHtml {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
